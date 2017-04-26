@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="author" content="kici e amicooo">
+<meta name="robots" content="index, follow">
+    
+    
+<link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' /> 
+
+<meta name="description" content="presentazione radiorain">
+<meta name="keywords" content=" radio, rain, radiorain ">    
+
+<title>radio rain</title>
+
+    
+<link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
+
+<link rel="stylesheet" href="stylesheets/reset.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="stylesheets/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="p5.min.js"></script>
+<script src="sketch/sketch.js"></script>
+
+
+    
+ 
+
+
+    
+</head>
+    
+<body>
+<header>
+    <div id="player">
+        <a href="index.html">
+            <div id="logo"><h1>RADIO RAIN</h1></div>
+        </a>
+    </div>
+</header>
+
+<section id="hero"><div id="sketch-holder"></div>
+</section>
+
+<section id="menu">
+    <div id="trackinfo"><div id="trackinfocontainer"><table>
+    <tr>
+        <th id="trackname"><h2>TRACK NAME</h2></th>
+    </tr>
+    <tr>
+    <td class="tracklabel">recorded by:</td>
+    <td class="tracklabel" id="namedb">Username</td>
+    </tr>
+    <tr>
+    <td class="tracklabel">recorded in:</td>
+    <td class="tracklabel" id="placedb">Place</td>
+  </tr>
+    </table></div></div><div id="useraction">
+        <a href="addtrack.html"><div id="addtrack"><h2>ADD A TRACK</h2></div></a>
+        <div id="user" class="container"><a href="register.html"><div id="register"><h2>REGISTER</h2></div></a><div id="login" class="header"><span>LOG IN</span></div> <div class="content">
+            <form  id="formexpand" action="/action_page.php"> <!--php di amicooo -->
+            <div id="logincontainer">
+                <input class="usernamebox" type="text" placeholder="email" name="uname" required><input class="usernamebox" type="password" placeholder="password" name="psw" required>
+                <button type="submit">log in</button>
+                <!--<input type="checkbox" checked="checked"> Remember me -->
+                </div>
+            <div id="facebooklogin">
+            <button type="submit">log in with facebook</button>
+            </div><div id="forgotcontainer">
+            <a href="#">forgot password?</a>
+            </div>   
+            </form> 
+            </div>
+        </div>
+    </div>
+    </section><section id="info"><div id="description"><div id="marquee">radio rain: un sito senza marquee</div></div><div id="contact">
+    
+    
+    <a id="fake_email" href="#"><span>contact us</span></a> 
+    
+    <a target="_blank" href="https://facebook.com/"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+    
+    
+    <a target="_blank" href="https://instagram.com/"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+    
+    <a target="_blank" href="#">shop</a>
+    
+    
+    </div></section>    
+    
+<footer>
+    </footer>
+    
+
+    <script>
+$(document).ready(function () {
+    $(".header").click(function () {
+        $header = $(this);
+        //getting the next element
+        $content = $header.next();
+        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+        $content.slideToggle(339, function () {
+            //execute this after slideToggle is done
+            //change text of header based on visibility of content div
+            $header.text(function () {
+                //change text based on condition
+                return $content.is(":visible") ? "X" : "LOG IN";
+            });
+        }); rantFormViewModel.wireEvents();
+    });
+});
+        
+    </script>  
+    
+    
+    <script>
+        jQuery('#login').click(function(){
+   jQuery(this).toggleClass('active');
+});</script>
+    
+
+    <script> $("#fake_email").click( function(e) {
+    var username = "radiorain", 
+          domain = "gmail.com";
+
+    window.location.href = "mailto:" + username + "@" + domain;
+} );
+</script>
+    
+
+    
+    
+    
+</body>
+ 
